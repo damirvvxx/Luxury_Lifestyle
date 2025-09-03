@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Lifestyle - Premium Cars, Watches & Newsletter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a0f05 0%, #2d1b0e 20%, #3d2b1e 40%, #4d3b2e 60%, #3d2b1e 80%, #2d1b0e 100%);
+            background-size: 400% 400%;
+            animation: luxuryGradient 30s ease infinite;
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* Projectile Star Effect */
+        .stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        /* Projectile Stars */
+        .projectile-star {
+            position: absolute;
+            background: radial-gradient(circle, #ffffff 0%, #ffd700 40%, #d4af37 70%, transparent 100%);
+            border-radius: 50%;
+            box-shadow: 
+                0 0 8px rgba(255, 255, 255, 0.9),
+                0 0 16px rgba(255, 215, 0, 0.7),
+                0 0 24px rgba(212, 175, 55, 0.5);
+        }
+
+        .projectile-star::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), rgba(255, 215, 0, 0.8), transparent);
+            transform: translate(-50%, -50%);
+            transform-origin: left center;
+        }
+
+        .projectile-star::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.6), transparent);
+            transform: translate(-50%, -50%);
+            transform-origin: left center;
+        }
+
+        /* Star Sizes */
+        .projectile-star.small {
+            width: 2px;
+            height: 2px;
+        }
+
+        .projectile-star.small::before {
+            width: 40px;
+        }
+
+        .projectile-star.small::after {
+            width: 25px;
+        }
+
+        .projectile-star.medium {
+            width: 3px;
+            height: 3px;
+        }
+
+        .projectile-star.medium::before {
+            width: 60px;
+        }
+
+        .projectile-star.medium::after {
+            width: 35px;
+        }
+
+        .projectile-star.large {
+            width: 4px;
+            height: 4px;
+        }
+
+        .projectile-star.large::before {
+            width: 80px;
+        }
+
+        .projectile-star.large::after {
+            width: 50px;
+        }
+
+        /* Projectile Star Animations */
+        .projectile-star:nth-child(1) {
+            animation: projectile1 4s linear infinite;
+            animation-delay: 0s;
+        }
+
+        .projectile-star:nth-child(2) {
+            animation: projectile2 6s linear infinite;
+            animation-delay: 1s;
+        }
+
+        .projectile-star:nth-child(3) {
+            animation: projectile3 5s linear infinite;
+            animation-delay: 2s;
+        }
+
+        .projectile-star:nth-child(4) {
+            animation: projectile4 7s linear infinite;
+            animation-delay: 0.5s;
+        }
+
+        .projectile-star:nth-child(5) {
+            animation: projectile5 4.5s linear infinite;
+            animation-delay: 1.5s;
+        }
+
+        .projectile-star:nth-child(6) {
+            animation: projectile6 5.5s linear infinite;
+            animation-delay: 2.5s;
+        }
+
+        .projectile-star:nth-child(7) {
+            animation: projectile7 6.5s linear infinite;
+            animation-delay: 0.8s;
+        }
+
+        .projectile-star:nth-child(8) {
+            animation: projectile8 4.8s linear infinite;
+            animation-delay: 1.8s;
+        }
+
+        .projectile-star:nth-child(9) {
+            animation: projectile9 5.2s linear infinite;
+            animation-delay: 3s;
+        }
+
+        .projectile-star:nth-child(10) {
+            animation: projectile10 6.8s linear infinite;
+            animation-delay: 0.3s;
+        }
+
+        /* Projectile Star Keyframes */
+        @keyframes projectile1 {
+            0% {
+                transform: translate(-50px, 20%) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(100vw + 50px), 20%) rotate(0deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes projectile2 {
+            0% {
+                transform: translate(-50px, 40%) rotate(0deg);
+                opacity: 0;
+            }
+            15% {
+                opacity: 1;
+            }
+            85% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(100vw + 50px), 40%) rotate(0deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes projectile3 {
+            0% {
+                transform: translate(-50px, 60%) rotate(0deg);
+                opacity: 0;
+            }
+            12% {
+                opacity: 1;
+            }
+            88% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(100vw + 50px), 60%) rotate(0deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes projectile4 {
+            0% {
+                transform: translate(-50px, 80%) rotate(0deg);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(100vw + 50px), 80%) rotate(0deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes projectile5 {
+            0% {
+                transform: translate(-50px, 30%) rotate(0deg);
+                opacity: 0;
+            }
+            8% {
+                opacity: 1;
+            }
+            92% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(100vw + 50px), 30%) rotate(0deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes projectile6 {
+            0% {
+                transform: translate(-50px, 70%) rotate(0deg);
+                opacity: 0;
+            }
+            18% {
+                opacity: 1;
+            }
+            82% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(100vw + 50px), 70%) rotate(0deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes projectile7 {
+            0% {
+                transform: translate(-50px, 15%) rotate(0deg);
+                opacity: 0;
+            }
+            14% {
+                opacity: 1;
+            }
+            86% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(100vw + 50px), 15%) rotate(0deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes projectile8 {
+            0% {
+                transform: translate(-50px, 55%) rotate(0deg);
+                opacity: 0;
+            }
+            16% {
+                opacity: 1;
+            }
+            84% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(100vw + 50px), 55%) rotate(0deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes projectile9 {
+            0% {
+                transform: translate(-50px, 85%) rotate(0deg);
+                opacity: 0;
+            }
+            22% {
+                opacity: 1;
+            }
+            78% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(100vw + 50px), 85%) rotate(0deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes projectile10 {
+            0% {
+                transform: translate(-50px, 25%) rotate(0deg);
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            75% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(100vw + 50px), 25%) rotate(0deg);
+                opacity: 0;
+            }
+        }
+
+        /* Twinkling Star Animation */
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+            25% {
+                opacity: 0.6;
+                transform: scale(1.1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.3);
+            }
+            75% {
+                opacity: 0.7;
+                transform: scale(1.05);
+            }
+        }
+
+        /* Moving Star Animation */
+        @keyframes moveStar {
+            0% {
+                transform: translate(0, 0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(100px, 50px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes luxuryGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Main Navigation */
+        .main-navbar {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(26, 26, 26, 0.95));
+            backdrop-filter: blur(30px);
+            border-bottom: 3px solid transparent;
+            background-clip: padding-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 0;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .main-navbar::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #d4af37, #ffd700, #d4af37, #ffd700, #d4af37);
+            background-size: 200% 100%;
+            animation: luxuryBorder 3s ease infinite;
+        }
+
+        @keyframes luxuryBorder {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .logo-link:hover {
+            transform: scale(1.05);
+        }
+
+        .luxury-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-emblem {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #d4af37 0%, #ffd700 30%, #fff 50%, #ffd700 70%, #d4af37 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 32px;
+            color: #000;
+            border: 4px solid #d4af37;
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.9), inset 0 0 20px rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: logoGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes logoGlow {
+            0% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.9), inset 0 0 20px rgba(255, 255, 255, 0.3); }
+            100% { box-shadow: 0 0 60px rgba(212, 175, 55, 1), inset 0 0 30px rgba(255, 255, 255, 0.5); }
+        }
+
+        .logo-emblem::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.4s ease;
+        }
+
+        .logo-emblem:hover::before {
+            left: 100%;
+        }
+
+        .logo-text-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-luxury {
+            font-size: 16px;
+            font-weight: 700;
+            color: #d4af37;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .logo-brand {
+            font-size: 14px;
+            font-weight: 500;
+            color: #888;
+            letter-spacing: 2px;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+            animation: textShimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes textShimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+            transition: left 0.4s ease;
+        }
+
+        .nav-link:hover::before {
+            left: 100%;
+        }
+
+        .nav-link:hover {
+            color: #d4af37;
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .nav-link.active {
+            color: #d4af37;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(255, 215, 0, 0.1));
+            border: 2px solid #d4af37;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Main Container */
+        .main-container {
+            margin-top: 120px;
+            padding: 0;
+            min-height: calc(100vh - 120px);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 10rem 3rem;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(45, 27, 14, 0.8) 50%, rgba(0, 0, 0, 0.7) 100%);
+            border-radius: 50px;
+            margin: 3rem;
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), inset 0 0 50px rgba(212, 175, 55, 0.1);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.05) 50%, transparent 70%);
+            animation: heroShine 6s ease-in-out infinite;
+        }
+
+        @keyframes heroShine {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        /* Hero Logo */
+        .hero-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-logo-emblem {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #d4af37 0%, #ffd700 30%, #fff 50%, #ffd700 70%, #d4af37 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 60px;
+            color: #000;
+            border: 5px solid #d4af37;
+            box-shadow: 0 0 60px rgba(212, 175, 55, 0.9), inset 0 0 30px rgba(255, 255, 255, 0.4);
+            margin-bottom: 1.5rem;
+            animation: heroLogoGlow 5s ease-in-out infinite alternate;
+        }
+
+        .hero-logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #d4af37;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            animation: heroTextShimmer 3s ease-in-out infinite;
+        }
+
+        .hero-author-credit {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffd700 0%, #d4af37 25%, #b8860b 50%, #d4af37 75%, #ffd700 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            margin-top: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+            animation: authorGlow 4s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .hero-author-credit::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -20px;
+            right: -20px;
+            bottom: -10px;
+            background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+            border-radius: 20px;
+            animation: authorShine 6s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes authorGlow {
+            0%, 100% {
+                background-position: 0% 50%;
+                text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            }
+            50% {
+                background-position: 100% 50%;
+                text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 0 0 40px rgba(212, 175, 55, 0.4);
+            }
+        }
+
+        @keyframes authorShine {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes heroLogoGlow {
+            0% { 
+                box-shadow: 0 0 60px rgba(212, 175, 55, 0.9), inset 0 0 30px rgba(255, 255, 255, 0.4);
+                transform: scale(1);
+            }
+            100% { 
+                box-shadow: 0 0 80px rgba(212, 175, 55, 1), inset 0 0 40px rgba(255, 255, 255, 0.6);
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes heroTextShimmer {
+            0%, 100% { 
+                text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+                transform: scale(1);
+            }
+            50% { 
+                text-shadow: 0 0 30px rgba(212, 175, 55, 0.9), 0 0 40px rgba(212, 175, 55, 0.4);
+                transform: scale(1.02);
+            }
+        }
+`
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #d4af37 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 50px rgba(212, 175, 55, 0.8);
+            animation: titleGlow 4s ease-in-out infinite alternate;
+            position: relative;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        @keyframes titleGlow {
+            0% { 
+                text-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+                transform: scale(1);
+            }
+            100% { 
+                text-shadow: 0 0 60px rgba(212, 175, 55, 0.9), 0 0 80px rgba(212, 175, 55, 0.4);
+                transform: scale(1.02);
+            }
+        }
+
+        .hero-content p {
+            font-size: 1.6rem;
+            color: #f0f0f0;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 400;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Luxury Sections */
+        .luxury-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .luxury-section.active {
+            opacity: 1;
+            transform: translateY(0);
+            display: block;
+        }
+
+        .luxury-section:not(.active) {
+            display: none;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #d4af37;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4af37, #ffd700, #d4af37);
+            border-radius: 2px;
+        }
+
+        /* Product Cards */
+        .cars-grid,
+        .watches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .car-card,
+        .watch-card {
+            background: linear-gradient(145deg, #ffffff 0%, #fafafa 50%, #f0f0f0 100%);
+            border-radius: 30px;
+            overflow: hidden;
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(212, 175, 55, 0.1);
+        }
+
+        .car-card::before,
+        .watch-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            margin: -3px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, #d4af37 0%, #ffd700 30%, #fff 50%, #ffd700 70%, #d4af37 100%);
+            background-size: 200% 200%;
+            animation: borderGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes borderGlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .car-card::after,
+        .watch-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left 0.4s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .car-card:hover::after,
+        .watch-card:hover::after {
+            left: 100%;
+        }
+
+        .car-card:hover,
+        .watch-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(212, 175, 55, 0.4), 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .car-image,
+        .watch-image {
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+            will-change: transform;
+        }
+
+        .car-image img,
+        .watch-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .car-card:hover .car-image img,
+        .watch-card:hover .watch-image img {
+            transform: scale(1.08);
+        }
+
+        .car-info,
+        .watch-info {
+            padding: 3rem;
+            background: linear-gradient(145deg, rgba(212, 175, 55, 0.08), rgba(255, 215, 0, 0.03), rgba(212, 175, 55, 0.05));
+            position: relative;
+            border-top: 3px solid rgba(212, 175, 55, 0.4);
+        }
+
+        .car-info::before,
+        .watch-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37, #ffd700, #d4af37, #ffd700, #d4af37);
+            background-size: 200% 100%;
+            animation: topBorderGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes topBorderGlow {
+            0%, 100% { background-position: 0% 0%; }
+            50% { background-position: 100% 0%; }
+        }
+
+        .car-info h3,
+        .watch-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            text-shadow: 0 2px 4px rgba(212, 175, 55, 0.2);
+        }
+
+        .watch-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(255, 215, 0, 0.05));
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            text-align: center;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .car-info p,
+        .watch-info p {
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .view-details-btn,
+        .more-info-btn {
+            background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #d4af37 100%);
+            background-size: 200% 100%;
+            color: #000;
+            border: none;
+            padding: 1.2rem 2.5rem;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .view-details-btn::before,
+        .more-info-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.4s ease;
+        }
+
+        .view-details-btn:hover::before,
+        .more-info-btn:hover::before {
+            left: 100%;
+        }
+
+        .view-details-btn:hover,
+        .more-info-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5);
+            background-position: 100% 0%;
+        }
+
+        /* Newsletter Section */
+        .newsletter-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            background: linear-gradient(145deg, rgba(26, 26, 26, 0.95), rgba(15, 15, 15, 0.95));
+            border-radius: 40px;
+            padding: 4rem;
+            border: 3px solid rgba(212, 175, 55, 0.4);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.03) 50%, transparent 70%);
+            animation: newsletterShine 8s ease-in-out infinite;
+        }
+
+        @keyframes newsletterShine {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        .newsletter-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            color: #d4af37;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .newsletter-subtitle {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .form-group {
+            text-align: left;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            color: #ffffff;
+            font-size: 1rem;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #d4af37;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .form-input::placeholder {
+            color: #888;
+        }
+
+        .subscribe-btn {
+            background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #d4af37 100%);
+            background-size: 200% 100%;
+            color: #000;
+            border: none;
+            padding: 1.5rem 3rem;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            margin-top: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+            position: relative;
+            z-index: 1;
+        }
+
+        .subscribe-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+            background-position: 100% 0%;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.2s ease;
+            overflow: hidden;
+        }
+
+        .modal-content {
+            background: linear-gradient(145deg, rgba(26, 26, 26, 0.98), rgba(15, 15, 15, 0.98));
+            margin: 3% auto;
+            padding: 0;
+            border: 2px solid #d4af37;
+            border-radius: 25px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 85vh;
+            position: relative;
+            overflow: hidden;
+            animation: slideIn 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #d4af37 100%);
+            background-size: 200% 100%;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .modal-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            animation: modalHeaderShine 4s ease-in-out infinite;
+        }
+
+        @keyframes modalHeaderShine {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #000;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .close {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #000;
+            font-size: 2.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .close:hover {
+            transform: translateY(-50%) scale(1.1);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            flex: 1;
+            scrollbar-width: thin;
+            scrollbar-color: #d4af37 #2d2d2d;
+        }
+
+        /* Custom Scrollbar Styling */
+        .modal-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-body::-webkit-scrollbar-track {
+            background: #2d2d2d;
+            border-radius: 4px;
+        }
+
+        .modal-body::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-body::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #ffd700 0%, #d4af37 100%);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .modal-description {
+            color: #e0e0e0;
+            line-height: 1.8;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(0, 0, 0, 0.3));
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #d4af37;
+            font-style: italic;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .specs-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #d4af37;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .spec-item {
+            background: linear-gradient(145deg, rgba(212, 175, 55, 0.2), rgba(255, 215, 0, 0.08), rgba(212, 175, 55, 0.15));
+            padding: 2.5rem;
+            border-radius: 25px;
+            border: 2px solid rgba(212, 175, 55, 0.5);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .spec-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37, #ffd700, #d4af37);
+        }
+
+        .spec-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.4);
+            border-color: #d4af37;
+        }
+
+        .spec-label {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #d4af37;
+            display: block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .spec-value {
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(26, 26, 26, 0.8));
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+            box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Footer */
+        .luxury-footer {
+            background: linear-gradient(135deg, #2d1b0e 0%, #3d2b1e 50%, #4d3b2e 100%);
+            border-top: 3px solid #d4af37;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .luxury-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #ffd700, #d4af37, #ffd700, transparent);
+            animation: footerShine 4s ease-in-out infinite;
+        }
+
+        @keyframes footerShine {
+            0% { opacity: 0.3; }
+            50% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .footer-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        .footer-author {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            background: linear-gradient(135deg, #ffd700 0%, #d4af37 50%, #b8860b 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+            animation: footerAuthorGlow 5s ease-in-out infinite;
+            position: relative;
+        }
+
+        .footer-author::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ffd700, #d4af37, #ffd700, transparent);
+            animation: footerAuthorUnderline 3s ease-in-out infinite;
+        }
+
+        @keyframes footerAuthorGlow {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes footerAuthorUnderline {
+            0%, 100% {
+                opacity: 0.5;
+                transform: scaleX(0.8);
+            }
+            50% {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .nav-link {
+                padding: 0.6rem 1rem;
+                font-size: 14px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .cars-grid,
+            .watches-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .newsletter-content {
+                padding: 2.5rem;
+            }
+
+            .newsletter-title {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 1rem auto;
+                max-height: 90vh;
+            }
+
+            .modal-body {
+                padding: 1.5rem;
+            }
+
+            .modal-image {
+                height: 250px;
+            }
+
+            .main-container {
+                margin-top: 100px;
+            }
+
+            .hero {
+                margin: 1rem;
+                padding: 6rem 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 3.5rem;
+                letter-spacing: 2px;
+            }
+
+            .hero-logo-emblem {
+                width: 80px;
+                height: 80px;
+                font-size: 40px;
+            }
+
+            .hero-logo-text {
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+            }
+
+            .luxury-section {
+                padding: 1rem;
+            }
+
+            /* Optimize projectile star animations on mobile for performance */
+            .projectile-star {
+                animation-duration: 8s !important;
+            }
+            
+            .projectile-star::before {
+                width: 30px !important;
+            }
+            
+            .projectile-star::after {
+                width: 20px !important;
+            }
+
+            /* Footer mobile styling */
+            .luxury-footer {
+                padding: 1.5rem 0;
+                margin-top: 3rem;
+            }
+
+            .footer-content {
+                padding: 0 1rem;
+            }
+
+            .footer-text {
+                font-size: 0.9rem;
+            }
+
+            .hero-author-credit {
+                font-size: 1.1rem;
+                margin-top: 1.5rem;
+            }
+
+            .footer-author {
+                font-size: 1rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .luxury-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .luxury-section.active {
+            opacity: 1;
+            transform: translateY(0);
+            display: block;
+        }
+
+        .luxury-section:not(.active) {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Projectile Star Effect -->
+    <div class="stars-container">
+        <!-- Projectile Stars -->
+        <div class="projectile-star small"></div>
+        <div class="projectile-star medium"></div>
+        <div class="projectile-star large"></div>
+        <div class="projectile-star small"></div>
+        <div class="projectile-star medium"></div>
+        <div class="projectile-star large"></div>
+        <div class="projectile-star small"></div>
+        <div class="projectile-star medium"></div>
+        <div class="projectile-star large"></div>
+        <div class="projectile-star small"></div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-navbar">
+        <div class="nav-content">
+            <div class="logo-section">
+                <a href="#" onclick="showHome()" class="logo-link">
+                    <div class="luxury-logo">
+                        <div class="logo-emblem">L</div>
+                        <div class="logo-text-container">
+                            <div class="logo-luxury">LUXURY</div>
+                            <div class="logo-brand">LIFESTYLE</div>
+                        </div>
+                    </div>
+                    <div class="logo-text">Luxury Lifestyle</div>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="#" onclick="showLuxuryCars()" class="nav-link active">Luxury Cars</a>
+                <a href="#" onclick="showLuxuryWatches()" class="nav-link">Luxury Watches</a>
+                <a href="#" onclick="showLuxuryNewsletter()" class="nav-link">Luxury Newsletter</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                            <div class="hero-logo">
+                <div class="hero-logo-emblem">L</div>
+                <div class="hero-logo-text">LUXURY LIFESTYLE</div>
+            </div>
+            <div class="hero-author-credit">Created by Qilichov Damirjon</div>
+                <h1>Welcome to Luxury Lifestyle</h1>
+                <p>Discover the finest collection of luxury cars, premium timepieces, and exclusive lifestyle content. Experience elegance, sophistication, and the art of living well.</p>
+            </div>
+        </section>
+
+        <!-- Luxury Cars Section -->
+        <section id="luxury-cars" class="luxury-section active">
+            <h2 class="section-title">Luxury Cars</h2>
+            <div class="cars-grid">
+                <div class="car-card" onclick="openModal('BMW M5 Competition', 'img/BMW M5 competition.jpeg', 'High-performance luxury sedan with aggressive styling and unmatched driving dynamics. The ultimate expression of BMW\'s engineering excellence.', 'Car', { 'Engine': '4.4L Twin-Turbo V8', 'Power': '617 HP', 'Price': '$73,000', 'Year': '2024' })">
+                    <div class="car-image">
+                        <img src="img/BMW M5 competition.jpeg" alt="BMW M5 Competition" loading="lazy" />
+                    </div>
+                    <div class="car-info">
+                        <h3>BMW M5 Competition</h3>
+                        <p>High-performance luxury sedan with aggressive styling and unmatched driving dynamics.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="car-card" onclick="openModal('BMW M5 CS', 'img/m5_cs.jpeg', 'Ultimate M5 with carbon fiber and exclusive styling. The most powerful and exclusive M5 ever created.', 'Car', { 'Engine': '4.4L Twin-Turbo V8', 'Power': '627 HP', 'Price': '$142,995', 'Year': '2024' })">
+                    <div class="car-image">
+                        <img src="img/m5_cs.jpeg" alt="BMW M5 CS" loading="lazy" />
+                    </div>
+                    <div class="car-info">
+                        <h3>BMW M5 CS</h3>
+                        <p>Ultimate M5 with carbon fiber and exclusive styling.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="car-card" onclick="openModal('Mercedes-AMG GT', 'img/mercedec_amg_gt.jpeg', 'Sports car with aggressive AMG styling and exceptional performance capabilities. Pure driving pleasure meets luxury craftsmanship.', 'Car', { 'Engine': '4.0L Biturbo V8', 'Power': '469 HP', 'Price': '$89,900', 'Year': '2024' })">
+                    <div class="car-image">
+                        <img src="img/mercedec_amg_gt.jpeg" alt="Mercedes-AMG GT" loading="lazy" />
+                    </div>
+                    <div class="car-info">
+                        <h3>Mercedes-AMG GT</h3>
+                        <p>Sports car with aggressive AMG styling and exceptional performance capabilities.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="car-card" onclick="openModal('Porsche 911', 'img/Porsche GT3 RS.jpeg', 'Iconic sports car with timeless design and pure driving pleasure. The benchmark for performance and precision engineering.', 'Car', { 'Engine': '4.0L Flat-6', 'Power': '518 HP', 'Price': '$223,800', 'Year': '2024' })">
+                    <div class="car-image">
+                        <img src="img/Porsche GT3 RS.jpeg" alt="Porsche 911" loading="lazy" />
+                    </div>
+                    <div class="car-info">
+                        <h3>Porsche 911</h3>
+                        <p>Iconic sports car with timeless design and pure driving pleasure.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="car-card" onclick="openModal('Porsche Cayman', 'img/Porsche gt4 rs.jpeg', 'Mid-engine sports car with perfect balance and exceptional handling. Pure driving dynamics in its most refined form.', 'Car', { 'Engine': '4.0L Flat-6', 'Power': '493 HP', 'Price': '$141,300', 'Year': '2024' })">
+                    <div class="car-image">
+                        <img src="img/Porsche gt4 rs.jpeg" alt="Porsche Cayman" loading="lazy" />
+                    </div>
+                    <div class="car-info">
+                        <h3>Porsche Cayman</h3>
+                        <p>Mid-engine sports car with perfect balance and exceptional handling.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="car-card" onclick="openModal('Porsche Taycan', 'img/porsche taykan.jpeg', 'Electric sports car with futuristic design and instant acceleration. The future of performance meets Porsche heritage.', 'Car', { 'Engine': 'Dual Motor Electric', 'Power': '402 HP', 'Price': '$86,700', 'Year': '2024' })">
+                    <div class="car-image">
+                        <img src="img/porsche taykan.jpeg" alt="Porsche Taycan" loading="lazy" />
+                    </div>
+                    <div class="car-info">
+                        <h3>Porsche Taycan</h3>
+                        <p>Electric sports car with futuristic design and instant acceleration.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Luxury Watches Section -->
+        <section id="luxury-watches" class="luxury-section">
+            <h2 class="section-title">Luxury Watches</h2>
+            <div class="watches-grid">
+                <div class="watch-card" onclick="openModal('Rolex Submariner', 'img/Rolex Submariner.jpeg', 'Iconic diving watch with exceptional craftsmanship and timeless design. The ultimate symbol of luxury and precision.', 'Watch', { 'Brand': 'Rolex', 'Movement': 'Automatic', 'Price': '$9,150', 'Water Resistance': '300m' })">
+                    <div class="watch-image">
+                        <img src="img/Rolex Submariner.jpeg" alt="Rolex Submariner" loading="lazy" />
+                    </div>
+                    <div class="watch-info">
+                        <h3>Rolex Submariner</h3>
+                        <p class="watch-price">$9,150</p>
+                        <p>Iconic diving watch with exceptional craftsmanship and timeless design.</p>
+                        <button class="more-info-btn">More Info</button>
+                    </div>
+                </div>
+                <div class="watch-card" onclick="openModal('Patek Philippe', 'img/Patek Philippe.jpeg', 'Ultra-luxury timepiece with intricate complications and heritage craftsmanship. You never actually own a Patek Philippe.', 'Watch', { 'Brand': 'Patek Philippe', 'Movement': 'Manual', 'Price': '$32,000', 'Complications': 'Multiple' })">
+                    <div class="watch-image">
+                        <img src="img/Patek Philippe.jpeg" alt="Patek Philippe" loading="lazy" />
+                    </div>
+                    <div class="watch-info">
+                        <h3>Patek Philippe</h3>
+                        <p class="watch-price">$32,000</p>
+                        <p>Ultra-luxury timepiece with intricate complications and heritage craftsmanship.</p>
+                        <button class="more-info-btn">More Info</button>
+                    </div>
+                </div>
+                <div class="watch-card" onclick="openModal('Audemars Piguet', 'img/Audemars Piguet.jpeg', 'Royal Oak collection featuring innovative design and mechanical excellence. The watch that changed the industry.', 'Watch', { 'Brand': 'Audemars Piguet', 'Movement': 'Automatic', 'Price': '$28,500', 'Case': 'Stainless Steel' })">
+                    <div class="watch-image">
+                        <img src="img/Audemars Piguet.jpeg" alt="Audemars Piguet" loading="lazy" />
+                    </div>
+                    <div class="watch-info">
+                        <h3>Audemars Piguet</h3>
+                        <p class="watch-price">$28,500</p>
+                        <p>Royal Oak collection featuring innovative design and mechanical excellence.</p>
+                        <button class="more-info-btn">More Info</button>
+                    </div>
+                </div>
+                <div class="watch-card" onclick="openModal('Omega Speedmaster', 'img/Omega Speedmaster.jpeg', 'The first watch worn on the moon. Legendary chronograph with exceptional precision and historical significance.', 'Watch', { 'Brand': 'Omega', 'Movement': 'Manual', 'Price': '$6,200', 'Heritage': 'Moon Watch' })">
+                    <div class="watch-image">
+                        <img src="img/Omega Speedmaster.jpeg" alt="Omega Speedmaster" loading="lazy" />
+                    </div>
+                    <div class="watch-info">
+                        <h3>Omega Speedmaster</h3>
+                        <p class="watch-price">$6,200</p>
+                        <p>The first watch worn on the moon. Legendary chronograph with exceptional precision.</p>
+                        <button class="more-info-btn">More Info</button>
+                    </div>
+                </div>
+                <div class="watch-card" onclick="openModal('Cartier Santos', 'img/Cartier Santos.jpeg', 'Aviation-inspired timepiece with distinctive square case and elegant design. A true icon of luxury watchmaking.', 'Watch', { 'Brand': 'Cartier', 'Movement': 'Automatic', 'Price': '$7,100', 'Case': 'Square' })">
+                    <div class="watch-image">
+                        <img src="img/Cartier Santos.jpeg" alt="Cartier Santos" loading="lazy" />
+                    </div>
+                    <div class="watch-info">
+                        <h3>Cartier Santos</h3>
+                        <p class="watch-price">$7,100</p>
+                        <p>Aviation-inspired timepiece with distinctive square case and elegant design.</p>
+                        <button class="more-info-btn">More Info</button>
+                    </div>
+                </div>
+                <div class="watch-card" onclick="openModal('IWC Portugieser', 'img/IWC Portugieser.jpeg', 'Maritime heritage meets modern luxury with sophisticated complications and elegant Portuguese design.', 'Watch', { 'Brand': 'IWC', 'Movement': 'Automatic', 'Price': '$12,800', 'Style': 'Portuguese' })">
+                    <div class="watch-image">
+                        <img src="img/IWC Portugieser.jpeg" alt="IWC Portugieser" loading="lazy" />
+                    </div>
+                    <div class="watch-info">
+                        <h3>IWC Portugieser</h3>
+                        <p class="watch-price">$12,800</p>
+                        <p>Maritime heritage meets modern luxury with sophisticated complications.</p>
+                        <button class="more-info-btn">More Info</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Luxury Newsletter Section -->
+        <section id="luxury-newsletter" class="luxury-section">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Join the Luxury Digest</h2>
+                <p class="newsletter-subtitle">Get weekly updates on cars, watches, and lifestyle. Stay informed about the latest trends, exclusive releases, and insider insights from the world of luxury.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-input" required>
+                            <option value="">Select Your Interests</option>
+                            <option value="cars">Luxury Cars</option>
+                            <option value="watches">Luxury Watches</option>
+                            <option value="lifestyle">Lifestyle</option>
+                            <option value="all">All Categories</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="subscribe-btn">Subscribe to Newsletter</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="luxury-footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                © 2025 Luxury Lifestyle | Designed by <span class="footer-author">Qilichov Damirjon</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" class="modal-image" src="" alt="">
+                <p id="modalDescription" class="modal-description"></p>
+                <div id="modalSpecs" class="modal-specs"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation functions
+        function showHome() {
+            hideAllSections();
+            document.querySelector('.hero').style.display = 'block';
+            updateActiveNav('Home');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showLuxuryCars() {
+            hideAllSections();
+            document.getElementById('luxury-cars').classList.add('active');
+            updateActiveNav('Luxury Cars');
+            window.scrollTo({ top: 120, behavior: 'smooth' });
+        }
+
+        function showLuxuryWatches() {
+            hideAllSections();
+            document.getElementById('luxury-watches').classList.add('active');
+            updateActiveNav('Luxury Watches');
+            window.scrollTo({ top: 120, behavior: 'smooth' });
+        }
+
+        function showLuxuryNewsletter() {
+            hideAllSections();
+            document.getElementById('luxury-newsletter').classList.add('active');
+            updateActiveNav('Luxury Newsletter');
+            window.scrollTo({ top: 120, behavior: 'smooth' });
+        }
+
+        function hideAllSections() {
+            document.querySelector('.hero').style.display = 'none';
+            const sections = ['luxury-cars', 'luxury-watches', 'luxury-newsletter'];
+            sections.forEach(sectionId => {
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    element.classList.remove('active');
+                }
+            });
+        }
+
+        function updateActiveNav(activeText) {
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            navLinks.forEach(link => {
+                if (link.textContent === activeText) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Modal functions
+        function openModal(title, imageSrc, description, type, specs) {
+            const modalTitle = document.getElementById('modalTitle');
+            const modalImage = document.getElementById('modalImage');
+            const modalDescription = document.getElementById('modalDescription');
+            const specsContainer = document.getElementById('modalSpecs');
+            
+            if (modalTitle) modalTitle.textContent = title;
+            if (modalImage) {
+                modalImage.src = imageSrc;
+                modalImage.alt = title;
+            }
+            if (modalDescription) modalDescription.textContent = description;
+            
+            // Clear previous specs
+            if (specsContainer) {
+                specsContainer.innerHTML = '';
+                
+                // Add specifications title
+                const specsTitle = document.createElement('h3');
+                specsTitle.className = 'specs-title';
+                specsTitle.textContent = 'Specifications';
+                specsContainer.appendChild(specsTitle);
+                
+                // Add new specs
+                if (specs && typeof specs === 'object') {
+                    Object.entries(specs).forEach(([key, value]) => {
+                        const specItem = document.createElement('div');
+                        specItem.className = 'spec-item';
+                        specItem.innerHTML = `
+                            <span class="spec-label">${key}</span>
+                            <span class="spec-value">${value}</span>
+                        `;
+                        specsContainer.appendChild(specItem);
+                    });
+                }
+            }
+            
+            const modal = document.getElementById('productModal');
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                // Scroll modal to top when opening
+                const modalBody = modal.querySelector('.modal-body');
+                if (modalBody) {
+                    modalBody.scrollTop = 0;
+                }
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('productModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('productModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Form submission
+        const newsletterForm = document.getElementById('newsletterForm');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for subscribing to the Luxury Digest! You will receive weekly updates about the latest in luxury lifestyle.');
+            });
+        }
+
+        // Initialize with cars section
+        showLuxuryCars();
+
+        // Ensure close button works properly
+        document.addEventListener('DOMContentLoaded', function() {
+            const closeBtn = document.querySelector('.close');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeModal);
+            }
+        });
+    </script>
+</body>
+</html>
