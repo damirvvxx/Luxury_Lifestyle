@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Lifestyle - Premium Cars, Watches & Newsletter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+   
+</head>
+<body>
+    <!-- Projectile Star Effect -->
+    <div class="stars-container">
+        <!-- Projectile Stars -->
+        <div class="projectile-star small"></div>
+        <div class="projectile-star medium"></div>
+        <div class="projectile-star large"></div>
+        <div class="projectile-star small"></div>
+        <div class="projectile-star medium"></div>
+        <div class="projectile-star large"></div>
+        <div class="projectile-star small"></div>
+        <div class="projectile-star medium"></div>
+        <div class="projectile-star large"></div>
+        <div class="projectile-star small"></div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-navbar">
+        <div class="nav-content">
+            <div class="logo-section">
+                <a href="#" onclick="showHome()" class="logo-link">
+                    <div class="luxury-logo">
+                        <div class="logo-emblem">L</div>
+                        <div class="logo-text-container">
+                            <div class="logo-luxury">LUXURY</div>
+                            <div class="logo-brand">LIFESTYLE</div>
+                        </div>
+                    </div>
+                    <div class="logo-text">Luxury Lifestyle</div>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="#" onclick="showLuxuryCars()" class="nav-link active">Luxury Cars</a>
+                <a href="#" onclick="showLuxuryWatches()" class="nav-link">Luxury Watches</a>
+                <a href="#" onclick="showLuxuryNewsletter()" class="nav-link">Luxury Newsletter</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                            <div class="hero-logo">
+                <div class="hero-logo-emblem">L</div>
+                <div class="hero-logo-text">LUXURY LIFESTYLE</div>
+            </div>
+            <div class="hero-author-credit">Created by Qilichov Damirjon</div>
+                <h1>Welcome to Luxury Lifestyle</h1>
+                <p>Discover the finest collection of luxury cars, premium timepieces, and exclusive lifestyle content. Experience elegance, sophistication, and the art of living well.</p>
+            </div>
+        </section>
+
+        <!-- Luxury Cars Section -->
+        <section id="luxury-cars" class="luxury-section active">
+            <h2 class="section-title">Luxury Cars</h2>
+            <div class="cars-grid">
+                <div class="car-card" onclick="openModal('BMW M5 Competition', 'img/BMW M5 competition.jpeg', 'High-performance luxury sedan with aggressive styling and unmatched driving dynamics. The ultimate expression of BMW\'s engineering excellence.', 'Car', { 'Engine': '4.4L Twin-Turbo V8', 'Power': '617 HP', 'Price': '$73,000', 'Year': '2024' })">
+                    <div class="car-image">
+                        <img src="img/BMW M5 competition.jpeg" alt="BMW M5 Competition" loading="lazy" />
+                    </div>
+                    <div class="car-info">
+                        <h3>BMW M5 Competition</h3>
+                        <p>High-performance luxury sedan with aggressive styling and unmatched driving dynamics.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="car-card" onclick="openModal('BMW M5 CS', 'img/m5_cs.jpeg', 'Ultimate M5 with carbon fiber and exclusive styling. The most powerful and exclusive M5 ever created.', 'Car', { 'Engine': '4.4L Twin-Turbo V8', 'Power': '627 HP', 'Price': '$142,995', 'Year': '2024' })">
+                    <div class="car-image">
+                        <img src="img/m5_cs.jpeg" alt="BMW M5 CS" loading="lazy" />
+                    </div>
+                    <div class="car-info">
+                        <h3>BMW M5 CS</h3>
+                        <p>Ultimate M5 with carbon fiber and exclusive styling.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="car-card" onclick="openModal('Mercedes-AMG GT', 'img/mercedec_amg_gt.jpeg', 'Sports car with aggressive AMG styling and exceptional performance capabilities. Pure driving pleasure meets luxury craftsmanship.', 'Car', { 'Engine': '4.0L Biturbo V8', 'Power': '469 HP', 'Price': '$89,900', 'Year': '2024' })">
+                    <div class="car-image">
+                        <img src="img/mercedec_amg_gt.jpeg" alt="Mercedes-AMG GT" loading="lazy" />
+                    </div>
+                    <div class="car-info">
+                        <h3>Mercedes-AMG GT</h3>
+                        <p>Sports car with aggressive AMG styling and exceptional performance capabilities.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="car-card" onclick="openModal('Porsche 911', 'img/Porsche GT3 RS.jpeg', 'Iconic sports car with timeless design and pure driving pleasure. The benchmark for performance and precision engineering.', 'Car', { 'Engine': '4.0L Flat-6', 'Power': '518 HP', 'Price': '$223,800', 'Year': '2024' })">
+                    <div class="car-image">
+                        <img src="img/Porsche GT3 RS.jpeg" alt="Porsche 911" loading="lazy" />
+                    </div>
+                    <div class="car-info">
+                        <h3>Porsche 911</h3>
+                        <p>Iconic sports car with timeless design and pure driving pleasure.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="car-card" onclick="openModal('Porsche Cayman', 'img/Porsche gt4 rs.jpeg', 'Mid-engine sports car with perfect balance and exceptional handling. Pure driving dynamics in its most refined form.', 'Car', { 'Engine': '4.0L Flat-6', 'Power': '493 HP', 'Price': '$141,300', 'Year': '2024' })">
+                    <div class="car-image">
+                        <img src="img/Porsche gt4 rs.jpeg" alt="Porsche Cayman" loading="lazy" />
+                    </div>
+                    <div class="car-info">
+                        <h3>Porsche Cayman</h3>
+                        <p>Mid-engine sports car with perfect balance and exceptional handling.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="car-card" onclick="openModal('Porsche Taycan', 'img/porsche taykan.jpeg', 'Electric sports car with futuristic design and instant acceleration. The future of performance meets Porsche heritage.', 'Car', { 'Engine': 'Dual Motor Electric', 'Power': '402 HP', 'Price': '$86,700', 'Year': '2024' })">
+                    <div class="car-image">
+                        <img src="img/porsche taykan.jpeg" alt="Porsche Taycan" loading="lazy" />
+                    </div>
+                    <div class="car-info">
+                        <h3>Porsche Taycan</h3>
+                        <p>Electric sports car with futuristic design and instant acceleration.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Luxury Watches Section -->
+        <section id="luxury-watches" class="luxury-section">
+            <h2 class="section-title">Luxury Watches</h2>
+            <div class="watches-grid">
+                <div class="watch-card" onclick="openModal('Rolex Submariner', 'img/Rolex Submariner.jpeg', 'Iconic diving watch with exceptional craftsmanship and timeless design. The ultimate symbol of luxury and precision.', 'Watch', { 'Brand': 'Rolex', 'Movement': 'Automatic', 'Price': '$9,150', 'Water Resistance': '300m' })">
+                    <div class="watch-image">
+                        <img src="img/Rolex Submariner.jpeg" alt="Rolex Submariner" loading="lazy" />
+                    </div>
+                    <div class="watch-info">
+                        <h3>Rolex Submariner</h3>
+                        <p class="watch-price">$9,150</p>
+                        <p>Iconic diving watch with exceptional craftsmanship and timeless design.</p>
+                        <button class="more-info-btn">More Info</button>
+                    </div>
+                </div>
+                <div class="watch-card" onclick="openModal('Patek Philippe', 'img/Patek Philippe.jpeg', 'Ultra-luxury timepiece with intricate complications and heritage craftsmanship. You never actually own a Patek Philippe.', 'Watch', { 'Brand': 'Patek Philippe', 'Movement': 'Manual', 'Price': '$32,000', 'Complications': 'Multiple' })">
+                    <div class="watch-image">
+                        <img src="img/Patek Philippe.jpeg" alt="Patek Philippe" loading="lazy" />
+                    </div>
+                    <div class="watch-info">
+                        <h3>Patek Philippe</h3>
+                        <p class="watch-price">$32,000</p>
+                        <p>Ultra-luxury timepiece with intricate complications and heritage craftsmanship.</p>
+                        <button class="more-info-btn">More Info</button>
+                    </div>
+                </div>
+                <div class="watch-card" onclick="openModal('Audemars Piguet', 'img/Audemars Piguet.jpeg', 'Royal Oak collection featuring innovative design and mechanical excellence. The watch that changed the industry.', 'Watch', { 'Brand': 'Audemars Piguet', 'Movement': 'Automatic', 'Price': '$28,500', 'Case': 'Stainless Steel' })">
+                    <div class="watch-image">
+                        <img src="img/Audemars Piguet.jpeg" alt="Audemars Piguet" loading="lazy" />
+                    </div>
+                    <div class="watch-info">
+                        <h3>Audemars Piguet</h3>
+                        <p class="watch-price">$28,500</p>
+                        <p>Royal Oak collection featuring innovative design and mechanical excellence.</p>
+                        <button class="more-info-btn">More Info</button>
+                    </div>
+                </div>
+                <div class="watch-card" onclick="openModal('Omega Speedmaster', 'img/Omega Speedmaster.jpeg', 'The first watch worn on the moon. Legendary chronograph with exceptional precision and historical significance.', 'Watch', { 'Brand': 'Omega', 'Movement': 'Manual', 'Price': '$6,200', 'Heritage': 'Moon Watch' })">
+                    <div class="watch-image">
+                        <img src="img/Omega Speedmaster.jpeg" alt="Omega Speedmaster" loading="lazy" />
+                    </div>
+                    <div class="watch-info">
+                        <h3>Omega Speedmaster</h3>
+                        <p class="watch-price">$6,200</p>
+                        <p>The first watch worn on the moon. Legendary chronograph with exceptional precision.</p>
+                        <button class="more-info-btn">More Info</button>
+                    </div>
+                </div>
+                <div class="watch-card" onclick="openModal('Cartier Santos', 'img/Cartier Santos.jpeg', 'Aviation-inspired timepiece with distinctive square case and elegant design. A true icon of luxury watchmaking.', 'Watch', { 'Brand': 'Cartier', 'Movement': 'Automatic', 'Price': '$7,100', 'Case': 'Square' })">
+                    <div class="watch-image">
+                        <img src="img/Cartier Santos.jpeg" alt="Cartier Santos" loading="lazy" />
+                    </div>
+                    <div class="watch-info">
+                        <h3>Cartier Santos</h3>
+                        <p class="watch-price">$7,100</p>
+                        <p>Aviation-inspired timepiece with distinctive square case and elegant design.</p>
+                        <button class="more-info-btn">More Info</button>
+                    </div>
+                </div>
+                <div class="watch-card" onclick="openModal('IWC Portugieser', 'img/IWC Portugieser.jpeg', 'Maritime heritage meets modern luxury with sophisticated complications and elegant Portuguese design.', 'Watch', { 'Brand': 'IWC', 'Movement': 'Automatic', 'Price': '$12,800', 'Style': 'Portuguese' })">
+                    <div class="watch-image">
+                        <img src="img/IWC Portugieser.jpeg" alt="IWC Portugieser" loading="lazy" />
+                    </div>
+                    <div class="watch-info">
+                        <h3>IWC Portugieser</h3>
+                        <p class="watch-price">$12,800</p>
+                        <p>Maritime heritage meets modern luxury with sophisticated complications.</p>
+                        <button class="more-info-btn">More Info</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Luxury Newsletter Section -->
+        <section id="luxury-newsletter" class="luxury-section">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Join the Luxury Digest</h2>
+                <p class="newsletter-subtitle">Get weekly updates on cars, watches, and lifestyle. Stay informed about the latest trends, exclusive releases, and insider insights from the world of luxury.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-input" required>
+                            <option value="">Select Your Interests</option>
+                            <option value="cars">Luxury Cars</option>
+                            <option value="watches">Luxury Watches</option>
+                            <option value="lifestyle">Lifestyle</option>
+                            <option value="all">All Categories</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="subscribe-btn">Subscribe to Newsletter</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="luxury-footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                © 2025 Luxury Lifestyle | Designed by <span class="footer-author">Qilichov Damirjon</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" class="modal-image" src="" alt="">
+                <p id="modalDescription" class="modal-description"></p>
+                <div id="modalSpecs" class="modal-specs"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
